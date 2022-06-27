@@ -4,14 +4,14 @@ const users = [
 ];
 
 export default {
-  'GET /api/v1/queryUserList': (req: any, res: any) => {
+  'GET /api/v1/queryUserList': (req, res) => {
     res.json({
       success: true,
       data: { list: users },
       errorCode: 0,
     });
   },
-  'PUT /api/v1/user/': (req: any, res: any) => {
+  'PUT /api/v1/user/': (req, res) => {
     res.json({
       success: true,
       errorCode: 0,

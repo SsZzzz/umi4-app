@@ -1,8 +1,11 @@
 import { defineConfig } from '@umijs/max';
 
 export default defineConfig({
+  base: '/base', // 路由前缀
+  title: 'title', // 页面标题
+  // favicon: '/rocket.png', // 标签页图标
+  hash: true,
   antd: {},
-  access: {},
   model: {},
   initialState: {},
   request: {},
@@ -19,17 +22,6 @@ export default defineConfig({
       path: '/home',
       component: './Home',
     },
-    {
-      name: '权限演示',
-      path: '/access',
-      component: './Access',
-    },
-    {
-        name: ' CRUD 示例',
-        path: '/table',
-        component: './Table',
-    },
   ],
   npmClient: 'yarn',
 });
-
