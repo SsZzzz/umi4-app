@@ -12,7 +12,7 @@ function LayoutComp() {
       <Header />
       <div className={styles.body}>
         <Sider />
-        <Content>
+        <Content className={styles.content}>
           <Outlet />
         </Content>
       </div>
