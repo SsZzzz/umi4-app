@@ -1,4 +1,4 @@
-import { useModel } from '@umijs/max';
+import { useModel } from 'umi';
 import styles from './index.less';
 
 export default () => {
