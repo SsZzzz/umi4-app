@@ -1,3 +1,4 @@
+import { RedditOutlined } from '@ant-design/icons';
 import { Layout, Menu } from 'antd';
 import styles from '../index.less';
 
@@ -7,6 +8,7 @@ const items = [
   {
     key: 'nav1',
     label: '二级导航',
+    icon: <RedditOutlined style={{ fontSize: 18 }} />,
     children: [
       { key: 'option1', label: '三级导航1' },
       { key: 'option2', label: '三级导航2' },
