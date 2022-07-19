@@ -6,7 +6,7 @@ import styles from './index.less';
 
 const { Content } = Layout;
 
-function LayoutComp() {
+export default () => {
   return (
     <div className={styles.container}>
       <Header />
@@ -18,6 +18,4 @@ function LayoutComp() {
       </div>
     </div>
   );
-}
-
-export default LayoutComp;
+};

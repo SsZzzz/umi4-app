@@ -8,7 +8,7 @@ const items = ['1', '2', '3'].map((key) => ({
   label: `大导航${key}`,
 }));
 
-function HeaderComp() {
+export default () => {
   return (
     <Header className={styles.header}>
       <div className={styles.logo} />
@@ -21,6 +21,4 @@ function HeaderComp() {
       />
     </Header>
   );
-}
-
-export default HeaderComp;
+};

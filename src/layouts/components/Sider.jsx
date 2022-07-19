@@ -17,7 +17,7 @@ const items = [
   },
 ];
 
-function SiderComp() {
+export default () => {
   return (
     <Sider width={200} className={styles.sider}>
       <Menu
@@ -29,6 +29,4 @@ function SiderComp() {
       />
     </Sider>
   );
-}
-
-export default SiderComp;
+};
