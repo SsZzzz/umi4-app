@@ -9,19 +9,26 @@ export default defineConfig({
   model: {},
   initialState: {},
   request: {},
+  // 页面一定要设置 title
   routes: [
     {
       path: '/',
-      component: '../layouts',
+      component: '../layout',
       routes: [
         {
-          path: '/',
-          redirect: '/home',
+          title: 'option1',
+          path: '/option1',
+          component: './Option1',
         },
         {
-          name: '首页',
-          path: '/home',
-          component: './Home',
+          title: 'option2',
+          path: '/option2',
+          component: './Option2',
+        },
+        {
+          title: 'option3',
+          path: '/option3',
+          component: './Option3',
         },
       ],
     },
