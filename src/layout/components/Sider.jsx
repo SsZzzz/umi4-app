@@ -11,7 +11,7 @@ const items = [
     label: '二级导航',
     icon: <RedditOutlined style={{ fontSize: 18 }} />,
     children: [
-      { key: '/option1', label: '三级导航1' },
+      { key: '/tableQuery', label: '表格查询' },
       { key: '/option2', label: '三级导航2' },
       { key: '/option3', label: '三级导航3' },
     ],

@@ -8,6 +8,7 @@ export default defineConfig({
   antd: {},
   model: {},
   initialState: {},
+  // 使用 umi 内部基于 axios 的请求
   request: {},
   // 页面一定要设置 title
   routes: [
@@ -16,9 +17,9 @@ export default defineConfig({
       component: '../layout',
       routes: [
         {
-          title: 'option1',
-          path: '/option1',
-          component: './Option1',
+          title: '表格查询',
+          path: '/tableQuery',
+          component: './TableQuery',
         },
         {
           title: 'option2',
