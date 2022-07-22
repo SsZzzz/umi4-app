@@ -6,12 +6,24 @@ export default defineConfig({
   // favicon: '/rocket.png', // 标签页图标
   hash: true,
   antd: {},
+  locale: {
+    default: 'zh-CN',
+    antd: true,
+    title: true,
+    baseNavigator: true,
+    baseSeparator: '-',
+  },
   model: {},
   initialState: {},
   // 使用 umi 内部基于 axios 的请求
   request: {},
   // 页面一定要设置 title
   routes: [
+    {
+      title: '登录页',
+      path: '/login',
+      component: './Login',
+    },
     {
       path: '/',
       component: '../layout',
