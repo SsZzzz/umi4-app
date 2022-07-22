@@ -2,8 +2,7 @@ import { defineConfig } from '@umijs/max';
 
 export default defineConfig({
   base: '/base', // 路由前缀
-  title: 'title', // 页面标题
-  // favicon: '/rocket.png', // 标签页图标
+  title: '政企研发后台模板', // 页面标题\
   hash: true,
   antd: {},
   locale: {
@@ -46,5 +45,9 @@ export default defineConfig({
       ],
     },
   ],
+  theme: {
+    '@primary-color': '#294AE6', // 全局主色
+    '@font-size-base': '14px', // 主字号
+  },
   npmClient: 'yarn',
 });
