@@ -1,5 +1,5 @@
 import { useRequest, useSetState } from 'ahooks';
-import { Button, Form, Input, Table } from 'antd';
+import { Button, DatePicker, Form, Input, Table } from 'antd';
 import service from './service';
 
 const columns = [
@@ -43,6 +43,9 @@ export default () => {
         </Form.Item>
         <Form.Item label="搜索项B" name="B">
           <Input placeholder="请输入" />
+        </Form.Item>
+        <Form.Item label="时间筛选C" name="date">
+          <DatePicker />
         </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit">
