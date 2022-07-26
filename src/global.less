@@ -1,0 +1,42 @@
+@import '@icon-park/react/styles/index.less';
+
+.ant-form-inline .ant-form-item {
+  margin-bottom: 16px;
+}
+
+/* 定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸 */
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+  background-color: rgb(230 230 230 / 20%);
+}
+
+/* 定义滚动条的轨道，内阴影及圆角 */
+*::-webkit-scrollbar-track {
+  background-color: rgb(230 230 230 / 20%);
+  border-radius: 5px;
+}
+
+*:hover::-webkit-scrollbar-track {
+  background-color: rgb(230 230 230 / 50%);
+}
+
+/* 定义滑块，内阴影及圆角 */
+*::-webkit-scrollbar-thumb {
+  height: 10px;
+  background-color: rgb(216 216 216 / 40%);
+  border-radius: 10px;
+  transition: background-color 1s;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background-color: rgb(216 216 216 / 100%);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(190 190 190 / 100%);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: rgb(160 160 160 / 100%);
+}
