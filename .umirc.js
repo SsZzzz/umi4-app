@@ -42,6 +42,11 @@ export default defineConfig({
           path: '/option3',
           component: './Option3',
         },
+        {
+          title: '404',
+          path: '*',
+          component: './404',
+        },
       ],
     },
   ],

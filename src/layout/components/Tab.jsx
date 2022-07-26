@@ -1,3 +1,4 @@
+import NotFound from '@/pages/404';
 import { Tabs } from 'antd';
 import { history, useLocation, useModel } from 'umi';
 import styles from '../index.less';
@@ -27,19 +28,23 @@ export default () => {
 
   return (
     <div className={styles.tabContainer}>
-      <Tabs
-        type="editable-card"
-        activeKey={pathname}
-        onChange={handleTabChange}
-        onEdit={handleTabEdit}
-        hideAdd
-      >
-        {tabs.map(({ path, title, component }) => (
-          <TabPane tab={title} key={path} closable={tabs.length > 1}>
-            <PureComponent component={component} />
-          </TabPane>
-        ))}
-      </Tabs>
+      {tabs.length ? (
+        <Tabs
+          type="editable-card"
+          activeKey={pathname}
+          onChange={handleTabChange}
+          onEdit={handleTabEdit}
+          hideAdd
+        >
+          {tabs.map(({ path, title, component }) => (
+            <TabPane tab={title} key={path} closable={tabs.length > 1}>
+              <PureComponent component={component} />
+            </TabPane>
+          ))}
+        </Tabs>
+      ) : (
+        <NotFound />
+      )}
     </div>
   );
 };
