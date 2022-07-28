@@ -1,14 +1,31 @@
 import NotFound from '@/pages/404';
 import { Tabs } from 'antd';
-import { history, useLocation, useModel } from 'umi';
+import { useEffect } from 'react';
+import { history, useAppData, useLocation, useModel } from 'umi';
 import styles from '../index.less';
 import PureComponent from './PureComponent';
 
 const { TabPane } = Tabs;
 
 export default () => {
+  const { routes, routeComponents } = useAppData();
   const { pathname } = useLocation();
   const { tabs, setTabs } = useModel('global');
+
+  useEffect(() => {
+    const tabId = tabs.find((obj) => obj.path === pathname)?.id;
+    if (!tabId) {
+      const route = Object.entries(routes)
+        .map(([key, obj]) => obj)
+        .filter((obj) => obj.title)
+        .find((obj) => obj.path === pathname);
+      if (route)
+        setTabs((tabs) => [
+          ...tabs,
+          { ...route, component: routeComponents[route.id] },
+        ]);
+    }
+  }, [pathname]);
 
   function handleTabChange(key) {
     history.push(key);
