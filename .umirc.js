@@ -33,12 +33,12 @@ export default defineConfig({
           component: './TableQuery',
         },
         {
-          title: 'option2',
+          title: '三级导航 2',
           path: '/option2',
           component: './Option2',
         },
         {
-          title: 'option3',
+          title: '三级导航 3',
           path: '/option3',
           component: './Option3',
         },

@@ -4,15 +4,15 @@ import service from './service';
 
 const columns = [
   {
-    title: 'name',
+    title: '名字',
     dataIndex: 'name',
   },
   {
-    title: 'nickName',
+    title: '简称',
     dataIndex: 'nickName',
   },
   {
-    title: 'gender',
+    title: '性别',
     dataIndex: 'gender',
     sorter: true,
   },
