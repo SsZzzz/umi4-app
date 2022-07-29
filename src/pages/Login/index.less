@@ -1,0 +1,97 @@
+.left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('/loginBackground.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.systemName {
+  position: absolute;
+  top: 32px;
+  left: 40px;
+  width: 232px;
+  height: 37px;
+  background-image: url('/systemName.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.slogan {
+  width: 800px;
+  color: #fff;
+
+  & > p:nth-of-type(1) {
+    display: flex;
+    margin-bottom: 32px;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    white-space: pre-wrap;
+
+    &::before {
+      display: block;
+      width: 43px;
+      height: 30px;
+      margin-top: 22px;
+      margin-right: 8px;
+      content: '';
+      background-image: url('/quotation.png');
+      background-size: contain;
+    }
+  }
+
+  & > p:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 18px;
+
+    &::before {
+      display: block;
+      width: 100px;
+      height: 2px;
+      margin-right: 8px;
+      content: '';
+      background-color: #fff;
+    }
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.loginBox {
+  width: 300px;
+  margin-bottom: 160px;
+}
+
+.title {
+  margin-bottom: 40px;
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.button {
+  width: 100%;
+}
+
+.captureItem,
+.captureContainer {
+  display: inline-block;
+  width: calc(50% - 8px);
+}
+
+.captureContainer {
+  height: 40px;
+  margin-left: 16px;
+  border: 1px solid #dee0e3;
+}
