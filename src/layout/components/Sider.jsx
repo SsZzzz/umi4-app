@@ -1,4 +1,4 @@
-import { Home, TableFile } from '@icon-park/react';
+import { TableFile } from '@icon-park/react';
 import { Layout, Menu } from 'antd';
 import { history, useLocation } from 'umi';
 import styles from '../index.less';
@@ -10,15 +10,6 @@ const items = [
     key: '/tableQuery',
     label: '表格查询',
     icon: <TableFile size="18" />,
-  },
-  {
-    key: 'nav2',
-    label: '二级导航',
-    icon: <Home size="18" />,
-    children: [
-      { key: '/option2', label: '三级导航2' },
-      { key: '/option3', label: '三级导航3' },
-    ],
   },
 ];
 

@@ -21,7 +21,7 @@ export default defineConfig({
     {
       title: '登录页',
       path: '/login',
-      component: './Login',
+      component: './login',
     },
     {
       path: '/',
@@ -30,17 +30,7 @@ export default defineConfig({
         {
           title: '表格查询',
           path: '/tableQuery',
-          component: './TableQuery',
-        },
-        {
-          title: '三级导航 2',
-          path: '/option2',
-          component: './Option2',
-        },
-        {
-          title: '三级导航 3',
-          path: '/option3',
-          component: './Option3',
+          component: './tableQuery',
         },
         {
           title: '404',
