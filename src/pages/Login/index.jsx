@@ -11,7 +11,7 @@ export default () => {
   function onFinish() {}
 
   return (
-    <Row>
+    <Row className={styles.loginContainer}>
       <Col span={16} className={styles.left}>
         <div className={styles.systemName} />
         <div className={styles.slogan}>
