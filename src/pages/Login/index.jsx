@@ -12,14 +12,14 @@ export default () => {
 
   return (
     <Row>
-      <Col span={17} className={styles.left}>
+      <Col span={16} className={styles.left}>
         <div className={styles.systemName} />
         <div className={styles.slogan}>
           <p>{quotation}</p>
           <p>杭千高速发展有限公司</p>
         </div>
       </Col>
-      <Col span={7} className={styles.right}>
+      <Col span={8} className={styles.right}>
         <div className={styles.loginBox}>
           <h1 className={styles.title}>欢迎回来</h1>
           <Form form={form} name="form" onFinish={onFinish}>
