@@ -7,6 +7,7 @@ specifiers:
   '@umijs/max': ^4.0.8
   ahooks: ^3.5.2
   antd: ^4.21.7
+  axios: ^0.27.2
   classnames: ^2.3.1
   husky: ^8.0.1
   lint-staged: ^13.0.3
@@ -23,6 +24,7 @@ dependencies:
   '@umijs/max': 4.0.8_4kelmht5p6seurkgrs525r3njq
   ahooks: 3.5.2
   antd: 4.21.7
+  axios: 0.27.2
   classnames: 2.3.1
   lodash-es: 4.17.21
 

@@ -14,8 +14,6 @@ export default defineConfig({
   },
   model: {},
   initialState: {},
-  // 使用 umi 内部基于 axios 的请求
-  request: {},
   // 页面一定要设置 title
   routes: [
     {
@@ -45,4 +43,11 @@ export default defineConfig({
     '@font-size-base': '14px', // 主字号
   },
   npmClient: 'pnpm',
+  proxy: {
+    '/api': {
+      target: 'http://cdh219:9090/',
+      changeOrigin: true,
+      pathRewrite: { '^/api': '/hqGantryApi' },
+    },
+  },
 });
