@@ -1,14 +1,29 @@
 import { Lock, User } from '@icon-park/react';
-import { Button, Col, Form, Input, Row } from 'antd';
+import { useRequest } from 'ahooks';
+import { Button, Col, Form, Input, Row, Spin } from 'antd';
 import styles from './index.less';
 import quotations from './quotations';
+import service from './service';
 
 const quotation = quotations[Math.floor(Math.random() * quotations.length)];
 
 export default () => {
   const [form] = Form.useForm();
 
-  function onFinish() {}
+  const {
+    data: verificationObj,
+    refresh,
+    loading,
+  } = useRequest(service.getGraphicVerificationCode);
+
+  const { run, loading: loginLoading } = useRequest(service.login, {
+    manual: true,
+    onError: () => refresh(),
+  });
+
+  function onFinish(values) {
+    run({ ...values, codeKey: verificationObj.codeKey });
+  }
 
   return (
     <Row className={styles.loginContainer}>
@@ -16,7 +31,6 @@ export default () => {
         <div className={styles.systemName} />
         <div className={styles.slogan}>
           <p>{quotation}</p>
-          <p>杭千高速发展有限公司</p>
         </div>
       </Col>
       <Col span={8} className={styles.right}>
@@ -24,7 +38,7 @@ export default () => {
           <h1 className={styles.title}>欢迎回来</h1>
           <Form form={form} name="form" onFinish={onFinish}>
             <Form.Item
-              name="username"
+              name="account"
               rules={[{ required: true, message: '请输入用户名' }]}
             >
               <Input
@@ -45,13 +59,18 @@ export default () => {
             </Form.Item>
             <Form.Item noStyle>
               <Form.Item
-                name="capture"
+                name="code"
                 rules={[{ required: true, message: '请输入验证码' }]}
-                className={styles.captureItem}
+                className={styles.verificationItem}
               >
                 <Input size="large" placeholder="请输入验证码" />
               </Form.Item>
-              <div className={styles.captureContainer}></div>
+              <Spin
+                spinning={loading}
+                wrapperClassName={styles.verificationContainer}
+              >
+                <img src={verificationObj?.base64} onClick={refresh} />
+              </Spin>
             </Form.Item>
             <Form.Item>
               <Button
@@ -59,6 +78,7 @@ export default () => {
                 size="large"
                 type="primary"
                 htmlType="submit"
+                loading={loginLoading}
               >
                 登录
               </Button>
